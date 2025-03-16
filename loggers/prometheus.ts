@@ -11,7 +11,12 @@ export class PrometheusPushgatewayClient {
 
 
     static async logMetric(args: LogMetricArgs, app: Homey.App): Promise<void> {
-        const basepath = 'http://192.168.10.31:9091/metrics';
+        const host = app.homey.settings.get('prometheus-pushgateway-host')
+        if (!host) {
+            app.error('No prometheus-pushgateway-host configured');
+            return;
+        }
+        const basepath = host + '/metrics';
         const job = 'homey';
         const url = `${basepath}/job/${job}/instance/${args.instance}`;
         const body = `${args.metric}{name="${args.name}"} ${args.value}\n`;
