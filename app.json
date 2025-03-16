@@ -66,6 +66,42 @@
           }
         ],
         "id": "log-to-opensearch"
+      },
+      {
+        "title": {
+          "en": "Log to Prometheus"
+        },
+        "args": [
+          {
+            "type": "text",
+            "name": "metric",
+            "placeholder": {
+              "en": "metric"
+            }
+          },
+          {
+            "type": "text",
+            "name": "instance",
+            "placeholder": {
+              "en": "instance"
+            }
+          },
+          {
+            "type": "text",
+            "name": "name",
+            "placeholder": {
+              "en": "name"
+            }
+          },
+          {
+            "type": "number",
+            "name": "value",
+            "placeholder": {
+              "en": "0"
+            }
+          }
+        ],
+        "id": "log-to-prometheus"
       }
     ]
   }
