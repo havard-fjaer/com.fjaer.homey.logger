@@ -1,0 +1,38 @@
+{
+  "title": {
+    "en": "Log to OpenSearch"
+  },
+  "args": [
+    {
+      "type": "text",
+      "name": "message",
+      "placeholder": {
+        "en": "Log message"
+      }
+    },
+    {
+      "type": "dropdown",
+      "name": "level",
+      "values": [
+        {
+          "id": "INFO",
+          "label": {
+            "en": "Info"
+          }
+        },
+        {
+          "id": "WARNING",
+          "label": {
+            "en": "Warning"
+          }
+        },
+        {
+          "id": "ERROR",
+          "label": {
+            "en": "Error"
+          }
+        }
+      ]
+    }
+  ]
+}
