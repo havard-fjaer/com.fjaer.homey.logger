@@ -73,6 +73,37 @@
         },
         "args": [
           {
+            "type": "dropdown",
+            "name": "type",
+            "value": "gauge",
+            "values": [
+              {
+                "id": "gauge",
+                "label": {
+                  "en": "Gauge"
+                }
+              },
+              {
+                "id": "counter",
+                "label": {
+                  "en": "Counter"
+                }
+              },
+              {
+                "id": "histogram",
+                "label": {
+                  "en": "Histogram"
+                }
+              },
+              {
+                "id": "summary",
+                "label": {
+                  "en": "Summary"
+                }
+              }
+            ]
+          },
+          {
             "type": "text",
             "name": "metric",
             "placeholder": {

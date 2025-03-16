@@ -2,6 +2,7 @@ import Homey from "homey/lib/Homey";
 
 interface LogMetricArgs {
     instance: string;
+    type: string;
     metric: string;
     name: string;
     value: number;
@@ -19,7 +20,7 @@ export class PrometheusPushgatewayClient {
         const basepath = host + '/metrics';
         const job = 'homey';
         const url = `${basepath}/job/${job}/instance/${args.instance}`;
-        const body = `${args.metric}{name="${args.name}"} ${args.value}\n`;
+        const body = `# TYPE ${args.metric} ${args.type}\n${args.metric}{name="${args.name}"} ${args.value}\n`;
         app.log(`Pushing metric to ${url}: ${body}`);
 
         try {
